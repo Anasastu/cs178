@@ -1,0 +1,10 @@
+Count3s: readInt32BitLE.o main.o
+	gcc temp/main.o temp/readInt32BitLE.o -o Count3s
+
+readInt32BitLE.o: readInt32BitLE.c
+	gcc -o temp/readInt32BitLE.o -c readInt32BitLE.c
+
+main.o: countThrees.c
+	gcc -o temp/main.o -c countThrees.c
+
+runCount3s: ./Count3s

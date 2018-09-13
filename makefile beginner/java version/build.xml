@@ -1,0 +1,18 @@
+<project name="CountThrees" >
+
+    <target name="Count3s">
+        <mkdir dir="build/classes"/>
+        <mkdir dir="build/jar"/>
+        <javac includeantruntime="false" srcdir="./" destdir="build/classes"/>
+        <jar destfile="build/jar/CountThrees.jar" basedir="build/classes">
+            <manifest>
+                <attribute name="Main-Class" value="CountThrees"/> 
+            </manifest>
+        </jar>
+    </target>
+
+    <target name="runCount3s">
+        <java jar="build/jar/CountThrees.jar" fork="true"/>
+    </target>
+
+</project>
